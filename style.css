@@ -10,16 +10,14 @@ body {
   font-family: 'Roboto Mono', monospace;
   color: black;
   line-height: 1.6;
+  background-color: #f4f4f4;
 }
-
-/* header */
 
 header {
   background-color: black;
   color: white;
   height: 200px;
 }
-
 
 header .container {
   height: 80px;
@@ -35,20 +33,13 @@ header .flex {
 
 header h1 {
   font-weight: 900;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 10px;
-  flex-wrap: wrap;
 }
 
 header ul {
   list-style-type: none;
   display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 10px;
-  flex-wrap: wrap;
 }
 
 header li {
@@ -67,72 +58,29 @@ header a:hover {
   border-bottom: 2px solid white;
 }
 
-/* showcase */
-
 .showcase {
   background-color: #333;
   color: white;
   height: 200px;
-}
-
-.showcase .container {
-  height: 200px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.showcase .flex {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .showcase h1 {
   font-size: 36px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 0 20px;
   animation: slideInFromTop 1s ease-in;
 }
-
-.showcase p {
-  font-size: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 0 20px;
-  animation: slideInFromBottom 1s ease-in;
-}
-
-/* learn */
 
 .learn {
   background-color: black;
   color: white;
-  min-height: 330px;
+  padding: 20px 0;
 }
 
 .learn .container {
-  min-height: 330px;
-  max-width: 840px;
+  max-width: 1000px;
   margin: 0 auto;
-}
-
-.learn .flex {
-  display: flex;
-  flex-direction: column;
-}
-
-.learn h1 {
-  font-size: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
 }
 
 .learn ul {
@@ -141,122 +89,78 @@ header a:hover {
   align-items: center;
   flex-wrap: wrap;
   list-style-type: none;
-  padding: 20px;
 }
 
 .learn li {
   flex: 1;
-  max-width: 240px;
-  min-width: 240px;
+  max-width: 300px;
+  margin: 10px;
+}
+
+.card {
+  background: #fff;
+  color: black;
   padding: 20px;
-  animation: slideInFromBottom 1s ease-in;
-}
-
-.learn .card {
-  background-color: #ccc;
-  color: black;
   border-radius: 10px;
-  box-shadow: 3px 10px rgba(216, 216, 216, 0.36);
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.learn .card:hover {
-  background-color: white;
-  color: #333;
-  transform: scale(1.01);
-  cursor: pointer;
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
-.learn .card a {
-  color: black;
+.card h2 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.project-links {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.btn {
   text-decoration: none;
-}
-
-.learn .home a {
-  display: grid;
-  grid-template-columns: minmax(0, 5fr) minmax(0, 4fr);
-}
-
-.learn .about a {
-  color: black;
-  text-decoration: none;
-  display: grid;
-}
-
-.learn .card i {
-  padding: 10px;
-}
-
-.learn .card h1 {
+  padding: 10px 15px;
+  border-radius: 5px;
   font-size: 14px;
-  padding: 6px;
+  color: white;
+  transition: background-color 0.3s ease;
 }
 
-/* footer */
+.view-site {
+  background-color: #888;
+}
 
+.view-site:hover {
+  background-color: #777;
+}
+
+.github-link {
+  background-color: #888;
+}
+
+.github-link:hover {
+  background-color: #777;
+}
+
+/* Footer */
 footer {
   background-color: #333;
   color: white;
-  height: 50px;
-}
-
-footer .container {
-  height: 50px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-footer .flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@media (max-width:500px) {
-  header {
-    height: 150px;
-  }
-
-  header .flex {
-    flex-direction: column;
-  }
-}
-
-@keyframes slideInFromLeft {
-  0% {
-    transform: translateX(-100%);
-  }
-
-  100% {
-    transform: translateX(0%);
-  }
-}
-
-@keyframes slideInFromRight {
-  0% {
-    transform: translateX(100%);
-  }
-
-  100% {
-    transform: translateX(0%);
-  }
+  text-align: center;
+  padding: 15px 0;
 }
 
 @keyframes slideInFromTop {
   0% {
     transform: translateY(-100%);
   }
-
   100% {
-    transform: translateY(0%);
-  }
-}
-
-@keyframes slideInFromBottom {
-  0% {
-    transform: translateY(100%);
-  }
-
-  100% {
-    transform: translateY(0%);
+    transform: translateY(0);
   }
 }
